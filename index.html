@@ -1,0 +1,738 @@
+ <!doctype html>
+<html>
+<head>
+
+<title>파라다이스 트래블 에이전시 | Paradise Travel Agency</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="logo.ico">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Noto+Sans+KR:100,300,400,500,700,900|VT323&display=swap&subset=korean" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+	<style type="text/css">
+		body{font-family: 'Noto Sans KR', sans-serif; font-weight:100; font-size:1vw; overflow:hidden; background-color:black;}
+		p{margin:0px;}
+
+		input[type=text] {
+			float:right;
+  			width: 90%;
+  			padding: 1% 1%;
+  			margin: 0px;
+			margin-bottom: 10%;
+  			box-sizing: border-box;
+  			border: none;
+  			border-bottom: 2px solid black;
+			font-family: 'VT323', monospace;
+			font-size: 1.1em;
+			background-color:transparent;
+			text-align:center;
+		
+		}
+		label {
+			float:right;
+			text-align:right;
+  			width: 30%;
+			box-sizing: border-box;
+  			padding: 12px 12px 12px 0;
+  			display: inline-block;
+		}
+		
+       .wrap{position: absolute; top: 0px; left: 0px; width: 100%; height: 100vh; overflow: hidden;}
+		
+       .one{position: relative; top: 0px; left: 0px; width: 100%; height: 10vh; border-bottom: 0.5px solid black; box-sizing: border-box; background-image:url("img/head1.png"); background-size:100% 100%; background-blend-mode: multiply; background-color:white;}
+		
+		.one-1{width:12.5%; height:100%; float:left; padding:0.5% 0.5% 0.5% 2.5%; box-sizing: border-box; color:red;}
+		.one-2{width:75%; height:100%; float:left; padding:0.5%; box-sizing: border-box; }
+		
+		  .titleN{font-size:1.3em; font-weight:300;}
+		  #logo{height:100%; color:red;}		
+			
+       .two{position: relative; top: 0px; left: 0px; width: 100%; height: 90vh;}
+		
+		.two-1{width:12.5%; height:100%; float:left; box-sizing: border-box; border: 0.5px solid black; background-image:url("img/mid1.png"); background-size:100% 100%; background-blend-mode: multiply; background-color:white;}
+		
+		 #tape{width:100%;}
+		
+		.two-2{width:12.5%; height:100%; float:left; box-sizing: border-box; border: 0.5px solid black; background-color:white;}
+		
+		 .two-2-1{width:100%; height:65%;}
+	
+		  .two-2-1-1{width:5%; height:100%; background-color:black; float:left; box-sizing: border-box; border: 0.5px solid black;}
+		  .two-2-1-2{width:90%; height:100%; float:left; box-sizing: border-box; border: 0.5px solid black;}
+		
+			.two-2-1-2-1{width:100%; height:55%; box-sizing: border-box; border: 0.5px solid black;}
+			.two-2-1-2-2{width:100%; height:15%; box-sizing: border-box; border: 0.5px solid black; vertical-align:middle;}
+			.two-2-1-2-3{width:100%; height:15%; box-sizing: border-box; border: 0.5px solid black;}
+			.two-2-1-2-4{width:100%; height:15%; box-sizing: border-box; border: 0.5px solid black;}
+		
+			 .two-2-1-2-1-1{width:100%; height:20%}
+			 .two-2-1-2-1-2{width:100%; height:40%}
+			 .two-2-1-2-1-3{width:100%; height:40%}
+		
+			 .pds{width:70%; font-family: 'VT323', monospace; font-size:6em; letter-spacing: -0.03em; text-align: left; float:left; margin-top:-9%}
+			 .heaven{width:30%; font-family: 'VT323', monospace; font-size:2em; letter-spacing: -0.03em; text-align: right; float:left;}
+			 .fname{width:100%; font-family: 'VT323', monospace; font-size:1.3em; padding:0px; padding-bottom:40%; }
+			 .billTitle{font-family: 'VT323', monospace; font-size:1.3em; text-align:center; margin-top:3%;}
+			 #blackforS{width:12vh; height:12vh; border-radius:50%; margin: 0 auto; box-sizing: border-box; border: 2px solid black;}
+			 #ynameA{width:100%;font-family: 'Libre Barcode 128 Text', cursive; font-size:2.3em; text-align:center; margin-top:10%;
+			    display:inline-block; 
+			    -webkit-transform:scale(1,2); /* Safari and Chrome */ 
+			    -moz-transform:scale(1,2); /* Firefox */ 
+			    -ms-transform:scale(1,2); /* IE 9 */ 
+			    -o-transform:scale(1,2); /* Opera */ 
+			    transform:scale(1,2); /* W3C */ 
+			} 
+			#que:hover{-webkit-filter: invert(100%); filter: invert(100%);}
+
+		 .two-2-2{width:100%; height:35%; box-sizing: border-box;}
+		
+			.ul li a span:nth-child(1) {background-color: #fff; color: #333;}
+			.ul li a span:nth-child(2) {background-color: #333; color: #fff;}
+			.ul li a:hover span:nth-child(2) {display: none;}
+		
+		  .two-2-2-1{width:100%; height:66.66666%; box-sizing: border-box; border: 0.5px solid black;}
+		  .two-2-2-2{width:100%; height:33.33333%; box-sizing: border-box; border: 0.5px solid black; background-color:black; color:white;}
+		
+			.print{font-family: 'VT323', monospace; font-size:6em; letter-spacing: -0.03em; text-align: center; margin-top:-5%}
+		
+		.two-3{width:75%; height:100%; float:left;}
+		
+		 .two-3-1{width:66.66666%; height:50%; float:left; box-sizing: border-box; border: 0.5px solid black; background-image:url("img/mid2.png"); background-size:100% 100%; background-blend-mode: multiply; border-radius:2%; background-color:white;}
+		 .two-3-2{width:33.33333%; height:50%; float:left; box-sizing: border-box; border: 0.5px solid black; padding:1%; text-align:center; vertical-align: middle; background-image:url("img/mid3.png"); background-size:100% 100%; background-blend-mode: multiply; background-color:white;}
+
+		 .two-3-3{width:66.66666%; height:50%; float:left; background-color:black; box-sizing: border-box; border: 0.5px solid black; color:white; font-weight:900; text-align: center; font-size:2em; padding:0% 3% 3%;}
+		.sign{margin-top:0px;}
+		 .two-3-5{width:33.33333%; height:50%; float:left; box-sizing: border-box; border: 0.5px solid black; background-color:black;}
+		
+		  .two-3-1-1{width:100%; height:30%; box-sizing: border-box; background-image:url("img/ticketBar.png"); background-size:100% 100%;}
+		  .two-3-1-2{width:100%; height:2%; box-sizing: border-box; background-color:black;}
+		  .two-3-1-3{width:100%; height:2%; box-sizing: border-box;}
+		  .two-3-1-4{width:100%; height:15%; box-sizing: border-box; background-color:black; overflow:hidden; mix-blend-mode: multiply;}
+		  .two-3-1-5{width:100%; height:51%; box-sizing: border-box; padding:0% 3% 0% 7%; font-family: 'VT323', 'Noto Sans KR'; }
+		  .two-3-2-1{width:95%; height:100%;}
+			
+			.darkness {
+  				width:100%;
+  				height:auto;
+				opacity:0;
+				margin-top:-200px;
+				mix-blend-mode: luminosity;
+			}
+			 .darkness:hover{
+  				opacity:1;
+			}
+			.verticalMiddle{line-height:800%;}
+			.marbleD{position:relative; height:100%; margin: auto; animation: rotation 60s infinite linear running; animation-fill-mode:both}
+				@keyframes rotation {
+				　from {
+                    transform:rotate(0deg);}
+                  to {
+                    transform:rotate(360deg);}
+				}
+			.marbleD:hover{animation-direction:reverse;}
+			#stic1 {width:200px; height:150px; position: absolute; padding-top:50px; top:150px; left:920px; background-image:url("pic/stic1.png"); background-size:contain;}
+			.sign{width:40%; font-size:1.5vw; margin-top: 3%; float:left; animation: pik 0.4s linear reverse infinite; font-family: 'VT323'; margin-bottom:2%}
+			@keyframes pik{
+				0%{color:black}
+				20%{color:lightgray}
+				40%{color:black}
+				60%{color:white}
+				80%{color:black}
+				100%{color:lightgray}
+			
+			}
+			#messageinput{width:100%; height:80%; font-family: 'VT323', 'Noto Sans KR'; font-weight:100; font-size:1.3vw; margin-top:1.5%; border: solid 1px #373737; word-break: keep-all;}
+			.boardingPass{
+				text-align: center;
+				font-size:1.5vw;
+				box-sizing: border-box;
+				border: 10px solid transparent;
+  				padding: 15px;
+  				-webkit-border-image: url(./img/border.png) 18 round; /* Safari 3.1-5 */
+  				-o-border-image: url(./img/border.png) 18 round; /* Opera 11-12.1 */
+  				border-image: url(./img/border.png) 18 round;}
+		#sendd{margin-left:35%;}
+			.disp{position:absolute;top:19%; left:83.7%; text-align: center; font-family: 'Noto Sans KR', sans-serif; font-weight:900; font-size:2vw; color:white; z-index: 999;}
+		
+		#light{text-align:center; font-size:1vw;}
+		#light2{text-align:center; font-size:1vw;}
+		#light3{text-align:center; font-size:1vw;}
+		#light4{text-align:center; font-size:1vw;}
+		
+		
+			.black_overlay{
+				display: none;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				z-index:1001;
+				-moz-opacity: 0.8;
+				opacity:.80;
+				filter: alpha(opacity=80);
+			}
+
+			.white_content {
+				display: none;
+				position: absolute;
+				top: 25%;
+				left: 25%;
+				width: 50%;
+				height: 50%;
+				padding: 16px;
+				border: 4px solid white;
+				background-color: black;
+				color:white;
+				z-index:1002;
+				overflow: auto;
+				font-family: 'VT323', 'Noto Sans KR'; font-weight:100;
+			}
+			.white_content h1, h3{
+				margin:0; font-family: 'VT323', 'Noto Sans KR'; font-weight:100;}
+		
+		/*loadingpage*/	
+		.loading{
+			width:100%;
+    		height:100%;
+    		position:fixed;
+    		left:0px;
+    		top:0px;
+    		background:#fff;
+			background-image:url("img/ptaLoad.gif");
+			background-size:20%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-origin: border-box;
+    		z-index:1000;
+		}
+
+		
+		/*inputrangestyle*/	
+		article {
+    		width: 150px;
+    		margin: 30px auto;
+		}
+		input[type=range] {
+    		width: 100%;
+			margin-bottom: 2%;
+		}
+		.customizing input[type=range] {
+    		-webkit-appearance: none;
+		}
+		.customizing  input[type=range]:focus {
+    		outline: none;
+		}
+		
+		.customizing input[type=range]::-webkit-slider-runnable-track {
+   		 	width: 100%;
+   		 	height: 1px;
+    	 	cursor: pointer;
+    	 	animate: 0.2s;
+    	 	background: black;
+		}
+		
+		.customizing input[type=range]::-webkit-slider-thumb {
+    	 	border: 1px solid black;
+     	 	height: 10px;
+     	 	width: 10px;
+    	 	background: black;
+		 	border-radius:50%;
+    	 	cursor: pointer;
+    	 	-webkit-appearance: none;
+    	 	margin-top: -5px;
+		}
+		
+		.customizing input[type=range]:focus::-webkit-slider-runnable-track {
+    	 background: black;
+		}
+		
+		input[type=color] {
+    		width: 5vw;
+			height:5vw;
+			margin-bottom: 2%;
+			padding:0;
+			box-sizing:border-box;
+			border: 0.1px solid black;
+			border-radius:50%;
+		}
+		
+		input[type="color"] {
+			-webkit-appearance: none;
+			box-sizing:border-box;
+			border: 0.1px solid black;
+			border-radius:50%;
+		}
+		input[type="color"]::-webkit-color-swatch-wrapper {
+			padding: 0;
+			box-sizing:border-box;
+			border: 0.1px solid black;
+			border-radius:50%;
+		}
+		input[type="color"]::-webkit-color-swatch {
+			box-sizing:border-box;
+			border: 0.1px solid black;
+			border-radius:50%;
+		}
+
+		input[type="submit"]{width: 130px; height:25px; background-color:black; color:white; border:none; font-size:1.3vw; font-family: 'VT323', monospace;}
+		input[type="button"]{width: 130px; height:25px; background-color:black; color:white; border:none; font-size:1.3vw; font-family: 'VT323', monospace;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">
+		</script>
+		<!--<script type="text/javascript" src="/js/common.js"></script>-->
+		<script type="text/javascript" src="jquery.simplyscroll.js"></script>
+		<link rel="stylesheet" href="jquery.simplyscroll.css" media="all" type="text/css">
+		<script type="text/javascript">
+				(function($) {
+						$(function() {
+								$(".scroller").simplyScroll({
+										customClass:'vert',
+										orientation:'vertical',
+										auto: true,
+										manualMode: 'loop',
+										speed: 1			
+									});
+							});
+					})(jQuery);
+		</script>
+	        <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            /*
+            conditions
+             - jquery obj for input
+             - data type(AP: alphabet, N: number, HA: hangul, AN: alphanumeric)
+             - event type (click, keydown, keypress, keyup(*default) ...)
+             - handler binded event type (*optional)
+             - max length( *optional)
+
+            */
+            function addInputHandler(conditions){
+                var $input = conditions.input;
+                var dataType = conditions.dataType;
+                var eventType = conditions.eventType;
+                if ((!$input) || (!dataType)) {
+                    throw {error:"NotEnoughArguments", errorMsg:"required argument is missing " +((!$input)?" target input element":" dataType")}
+                    return;
+                }
+                if ($input[0].tagName != "INPUT") {
+                    throw {error:"IlregalTargetElement", errorMsg:"target element is not input"};
+                    return;
+                }
+                if ((!eventType)) {
+                    eventType = "keyup";
+                }
+                var handlerFunc = conditions.handler;
+                if ((!handlerFunc)) {
+                    handlerFunc = function(event){
+                        $("#divKeyCode").empty().html("<span> event key code = "+event.keyCode+"</span>");
+                        var regEx = null;
+                        if (dataType == "N") {
+                            regEx = /[^0-9]/gi;
+                        } else if (dataType == "AP") {
+                            regEx = /[^a-z]/gi;
+                        }else if (dataType == "AN") {
+                            regEx = /[^a-z0-9]/gi;
+                        }else if (dataType == "HA") {
+                            regEx = /[a-z0-9]/gi;
+
+                        }else{
+                            throw {error:"IlregalDataType", errorMsg:"dataType("+dataType+") is incorrect"}     
+                        }
+                        remainOnlyTargetValue(regEx, $input,event);
+                        //return true;
+                    };  // end of handlerFunc
+                } // end of if to check handlerFunc
+                $input.on(eventType,handlerFunc);
+
+                if (conditions.maxlength) {
+                    $input.attr("maxlength",conditions.maxlength);
+                }
+
+            }
+            function remainOnlyTargetValue(regEx, $input,event) {
+                if ((!(event.keyCode >=34 && event.keyCode<=40)) && event.keyCode != 16) {
+                    var inputVal = $input.val();
+                    if (regEx.test(inputVal)) {
+                        $input.val(inputVal.replace(regEx,''));    
+                    }
+                }
+            }
+
+            $(document).ready(function(){
+
+                try {
+                    addInputHandler({input:$("#age"),dataType:"N",maxlength:7});
+                    addInputHandler({input:$("#yname"),dataType:"AP"});
+                    addInputHandler({input:$("#state"),dataType:"AN"});
+                    addInputHandler({input:$("#hangul"),dataType:"HA"});
+                } catch(e) {
+                    console.log(e);
+                }
+            });
+        </script>
+</head>
+
+<body>
+	<img src="img/mar/b.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/y.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/c.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/g.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/j.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/m.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/o.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/p.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/r.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/v.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/w.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<img src="img/mar/bk.png" class="drag" style="width: 13vh; position: absolute; top:195px; left:290px; cursor: pointer; z-index:999;">
+	<div id="stic1"></div>
+	<div class="wrap">
+	<div class="loading"></div>
+		<div class="one" id="one">
+			<div class="one-1"><img src="img/logo.png" id="logo"></div>
+			<div class="one-2">
+				<p class="titleN">파라다이스 트래블 에이전시</p>
+				<p class="titleN">Paradise Travel Agency</p>
+			</div>
+		</div>
+			<div class="two">
+				<div class="two-1" id="two1">
+					<ul class="scroller">
+					    <li><img src="img/tape.png" id="tape"></li>
+					</ul>
+				</div>
+				<div class="two-2" id="two2">
+					 <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+					<div style="width:42px; height:42px; position:absolute; left:22.5%;">
+						<img src="img/quest.png" style="width:100%; height:auto;" id="que">
+					</div>
+					</a>
+        			<div id="light" class="white_content">
+						<h1>PTA Luggage Tag</h1><h3>파라다이스 트래블 에이전시 수하물 태그</h3><br> 
+						<h3>name</h3><br>
+							1. [명사] 이름, 성명, 성함<br>
+						2. [명사] <b>평판</b>, 명성 <br><br>
+						<h3>age</h3><br>
+							1. [명사] 나이, 연령, 수명<br>
+							2. [명사] <b>(생애의 특정) 시기</b><br><br>
+						<h3>state</h3><br>
+							1. [C] <b>상태</b><br>
+							2. [C] State 국가, 나라<br><br>
+						
+						당신은 누구인가요? 어떤 삶을 살아왔나요?<br>여행을 떠나기 전 현실 속에서 당신을 감쌌던 껍데기들은 수하물 태그에 적어 PTA 보관함에 잠시 맡겨두세요.<br><font color="yellow">(수하물 태그의 구슬'들'을 드래그 해보세요!)</font><br><br>
+						<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+        			<div id="fade" class="black_overlay"></div>
+					
+
+					<div class="two-2-1">
+						<div class="two-2-1-1"></div>
+						<div class="two-2-1-2">
+							<div class="two-2-1-2-1">
+								<div class="two-2-1-2-1-1">
+									<p class="billTitle">PUT YOUR<br>MARBLE STICKER</p>
+								</div>
+								<div class="two-2-1-2-1-2">
+									<div id="blackforS"></div>
+								</div>
+								<div class="two-2-1-2-1-3">
+									<form style="width:100%; height:100%;">
+										<div style="width:20%; height:100%; float:left;">
+  										<label class="fname">NAME:</label>
+										<label class="fname">AGE:</label>
+										<label class="fname">STATE:</label> </div>
+										<div style="width:75%; height:100%; float:left;">
+											<input type="text" id="yname" oninput="myFunction()">							
+  											<input type="text" id="age" >
+  											<input type="text" id="state" ></div>
+										</form>
+
+								</div>
+							</div>
+							<div class="two-2-1-2-2"><p id="ynameA"></p></div>
+							<div class="two-2-1-2-3"></div>
+							<div class="two-2-1-2-4">
+								<p class="pds">PDS</p>
+								<p class="heaven">7/24</p>
+							</div>
+						</div>
+						<div class="two-2-1-1"></div>
+						</div>
+					<div class="two-2-2">
+						<iframe src="bar.html" scrolling="no" class="two-2-2-1"></iframe>
+						<div class="two-2-2-2"><p class="print">PRINT</p></div>
+					</div>				
+				</div>
+				<div class="two-3">
+					<div class="two-3-1" id="two31">
+						
+						 <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">
+					<div style="width:42px; height:42px; position:absolute; top:44%; left:72%;">
+						<img src="img/quest.png" style="width:100%; height:auto;" id="que">
+					</div>
+					</a>
+        			<div id="light2" class="white_content"><h1>PTA Boarding Pass</h1><h3>PTA 여행 티켓</h3><br>파라다이스 트래블 에이전시와 함께 여행을 떠날 수 있는 티켓입니다.<br>당신은 어떤 시간과, 어떤 물빛과, 어떤 햇살과 함께하는 바다를 좋아하나요?<br><font color="yellow">(좋아하는 시간, 물빛, 햇빛을 고르고 'Bon Voyage!' 버튼을 누르면 여행을 떠납니다)</font><br><font color="gray">*시간 조절 버튼은 제멋대로의 시간 흐름을 갖고 있습니다.</font><br><font color="yellow">('Change BG-C' 버튼도 눌러보세요! 재미있는 이벤트가..!)</font><br><a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+        			<div id="fade" class="black_overlay"></div>
+		
+						<div class="two-3-1-1">
+						</div>
+						<div class="two-3-1-2"></div>
+						<div class="two-3-1-3"></div>
+						<div class="two-3-1-4" id="two314">
+							<div class="darkness"><img src="img/1.gif" id="randomImage" style="width:100%; height:auto;"></div>
+						</div>
+						<div class="two-3-1-5">
+							<form method="get" action="page2.html" style="width:100%; height:95%" class="customizing" target="_blank">
+
+			<table style="width:100%; height:100%">
+				<tr>
+                    <td>시간</td>
+                    <td colspan="3"><input type="range" name="favTime" size="10" min="0" max="1000"></td>
+					<td></td>
+					<td style="text-align:right; padding-right:3.2%; letter-spacing:2px">물빛</td>
+					<td style="text-align:center; letter-spacing:2px">햇빛</td>
+					<td></td>
+					<td></td>
+                </tr>
+                <tr>
+                    <td style="padding-left:0.45%; vertical-align: super;">TIME</td>
+                    <td style="vertical-align: super;">Day?</td>
+					<td style="text-align:center; vertical-align: super;">Choose Anything!</td>
+					<td style="text-align:right; vertical-align: super;">Night?</td>
+					<td></td>
+					<td rowspan="2" style="text-align:right;"><input type="color" name="badaColor" value="#001e0f" id="trt"></td>
+					<td rowspan="2" style="text-align:center;"><input type="color" name="haeColor" value="#ffffff" id="tot"></td>
+					<td colspan="2" style="text-align:center;"><input type="submit" value="Bon Voyage"></td>
+                </tr>
+                <tr>
+					<td colspan="4" rowspan="3" class="boardingPass">BOARDING PASS</td>
+					<td></td>
+					<td colspan="2" style="text-align:center;"><input type="button" onclick="changebgcolor()" value="Change BG-C"></td>
+                </tr>
+
+				<tr>
+					<td></td>
+					<td colspan="2" style="padding-left:7%">1. WATER COLOR</td>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2" style="padding-left:7%">2. SUNSHINE COLOR</td>
+					<td colspan="2"></td>
+				</tr>
+					
+            </table>
+
+            <table>
+                <tr>
+                    <td colspan="2">
+                    </td>
+                </tr>
+            </table>
+        </form>
+						</div>
+						
+					</div>
+					
+					<div class="two-3-2" id="two32">
+						
+						<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block'">
+					<div style="width:42px; height:42px; position:absolute; top:50%; left:75%;">
+						<img src="img/quest.png" style="width:100%; height:auto;" id="que">
+					</div>
+					</a>
+        			<div id="light3" class="white_content"><h1>Ocean Beads Vending Machine</h1><h3>바다구슬 자판기</h3><br>PTA 티켓에서 좋아하는 물빛을 골랐나요?<br> 그렇다면 당신은 이미 자판기에서 갓 나온 가장 예쁜 색의 구슬을 선물 받았을 것입니다.<br> (질감은 랜덤! 진짜 당신만의 구슬을 드릴게요.)<br> <a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+        			<div id="fade" class="black_overlay"></div>
+
+						<div class="two-3-2-1">
+						<p class="disp">바다구슬<br>자판기</p>
+						
+							<img src="img/ranMarble.png" class="marbleD" id="mar">
+						</div> 
+
+					</div>
+					<div class="two-3-3">
+						<a href = "javascript:void(0)" onclick = "document.getElementById('light4').style.display='block';document.getElementById('fade').style.display='block'">
+					<div style="width:42px; height:42px; position:absolute; top:50%; left:72%;">
+						<img src="img/quest.png" style="width:100%; height:auto;" id="que">
+					</div>
+					</a>
+        			<div id="light4" class="white_content"><h1>Guest Book</h1><h3>방명록</h3><br>제작자에게 작은 메시지를 보내주세요!<br><font color="yellow">(TMI. 제작자는 편지 받는 것을 아주 좋아합니다♥)</font><br> <a href = "javascript:void(0)" onclick = "document.getElementById('light4').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+        			<div id="fade" class="black_overlay"></div>
+
+							<p class="sign">GUEST BOOK</p>
+						<input type="text" id="messageinput" style="color:white" placeholder="/ CLICK HERE AND LEAVE ME A MESSAGE /">
+						<input type="button" id="sendd" style="width: 130px; height:25px; background-color:white; color:black; border:none; font-size:1.3vw; font-family: 'VT323', monospace;" value="SEND"></div>
+					
+					<iframe id="marble" src="marble.html" class="two-3-5" scrolling="no">
+					</iframe></div>
+				</div>
+			</div>		
+	<a id="target" style="display: none"></a>
+	<script>
+    $(window).load(function(){
+        $(".loading").fadeOut();
+    });
+	
+		sendd.onclick = function(){
+			location.href = "mailto:megatone4208@gmail.com?subject=임정주에게 보내는 메세지&body=" + messageinput.value;	
+		}
+</script>
+	<script>
+		function myFunction() {
+  			var q = document.getElementById("yname").value;
+			document.getElementById("ynameA").innerHTML = q;
+			}		
+	</script>
+	<script lagnuage="javascript" type="text/javascript">
+	
+		var TOT=document.getElementById("tot").value;
+		var TRT=document.getElementById("trt").value;
+		var ONE=document.getElementById?document.getElementById("one"):document.all.one;
+		var TWO1=document.getElementById?document.getElementById("two1"):document.all.two1;
+		var TWO2=document.getElementById?document.getElementById("two2"):document.all.two2;
+		var TWO31=document.getElementById?document.getElementById("two31"):document.all.two31;
+		var TWO32=document.getElementById?document.getElementById("two32"):document.all.two32;
+		var TWO314=document.getElementById?document.getElementById("two314"):document.all.two314;
+		var MAR=document.getElementById?document.getElementById("blackforS"):document.all.blackforS;
+
+		function resetit(){
+			ONE.style.backgroundColor = '';
+			TWO1.style.backgroundColor = '';
+			TWO2.style.backgroundColor = '';
+			TWO31.style.backgroundColor = '';
+			TWO32.style.backgroundColor = '';
+
+		}
+
+		function changebgcolor(){
+			TOT = document.getElementById("tot").value;
+			TRT = document.getElementById("trt").value;
+			ONE.style.backgroundColor = TOT;
+			TWO1.style.backgroundColor = TOT;
+			TWO2.style.backgroundColor = TOT;
+			TWO31.style.backgroundColor = TOT;
+			TWO32.style.backgroundColor = TOT;
+			TWO314.style.backgroundColor = TRT;
+			MAR.style.backgroundColor = TRT;
+		}
+		
+		trt.onchange = function(){
+			
+			localStorage.setItem('coll', trt.value);
+			marble.src = "marble.html";		
+		}
+		
+		//초기 색지정
+		localStorage.setItem('coll', "#001e0f");
+		
+		window.addEventListener('message', function(e) {
+  			console.log(e.data); // { hello: 'parent' }
+  			var item = localStorage.getItem('coll');
+  			console.log(item); // zerocho
+  			document.getElementById('marble').contentWindow.postMessage(item, '*');
+		});
+		
+			resetit();
+	</script>
+	<script lagnuage="javascript" type="text/javascript">
+
+ changeSec = 1;
+ curLink = 0;
+
+ var imageSrc = new Array(
+  "img/1.gif"
+  , "img/2.gif"
+  , "img/3.gif"
+  , "img/4.gif"
+  , "img/5.gif"
+  , "img/6.gif"
+  , "img/7.gif"
+  , "img/8.gif"
+  , "img/9.gif"
+  , "img/10.gif"
+  , "img/11.gif"
+  , "img/12.gif"
+  , "img/13.gif"
+  );
+
+ var ranImages = new Array();
+ for(x=0; x<imageSrc.length; x++) {
+      ranImages[x] = new Image();
+      ranImages[x].src = imageSrc[x];
+ }
+
+function randomImage() {
+     curLink=Math.floor(Math.random()*ranImages.length);
+     document.getElementById('randomImage').src = ranImages[curLink].src;
+     setTimeout("randomImage()", changeSec*1000);
+}
+
+randomImage();
+
+</script>
+<script>
+
+$("#send").on('click', function(e) {
+html2canvas(e.target.parentElement).then(function(canvas) {
+if (navigator.msSaveBlob) {
+var blob = canvas.msToBlob();
+return navigator.msSaveBlob(blob, 'PTA.jpg');
+} else {
+var el = document.getElementById("target");
+el.href = canvas.toDataURL("image/jpeg");
+el.download = 'PTA.jpg';
+el.click();
+}
+});
+});
+	
+$("#cam").on('click', function(e) {
+html2canvas(e.target.parentElement).then(function(canvas) {
+if (navigator.msSaveBlob) {
+var blob = canvas.msToBlob();
+return navigator.msSaveBlob(blob, 'PTA.jpg');
+} else {
+var el = document.getElementById("target");
+el.href = canvas.toDataURL("image/jpeg");
+el.download = 'PTA.jpg';
+el.click();
+}
+});
+});
+</script>
+	<script type="text/javascript">
+	//아래 코드를 삽입하면 drag 클래스가 적용된 객체들은 드래그가 가능합니다.
+	(function(){
+		var d = false;
+		var target,dx,dy;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; dx = e.offsetX; dy = e.offsetY; target = e.target;}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (e.clientX - dx) + "px";
+					target.style.top = (e.clientY - dy) + "px";}
+			}
+		}
+	})();
+
+	mar.onclick = function(){
+		t[i].style.display = "block";
+
+		car.setAttribute("src","car2.jpg"); //바뀌는 값
+		
+		}
+	</script>
+</body>
+</html>

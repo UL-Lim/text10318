@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	<iframe name="Right" src="review.html" style="width:400px; height:400px;" scrolling="no"></iframe>
+	<button id="iframeRefresher">Refresh Iframe</button>
+	
+	<script type="text/javascript">
+	
+	window.onload = function() {
+    var refresherButton = document.getElementById('iframeRefresher');
+    if (refresherButton.addEventListener)
+        refresherButton.addEventListener('click', refreshIframe, false);
+    else
+        refresherButton.attachEvent('click', refreshIframe);
+}
+
+function refreshIframe() {
+    var ifr = document.getElementsByName('Right')[0];
+    ifr.src = ifr.src;
+}
+	
+	</script>
+</body>
+</html>
